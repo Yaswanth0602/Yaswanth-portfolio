@@ -49,24 +49,40 @@
         <!-- About Section -->
         <div id="about" class="section">
             <h2>About Me</h2>
-            <p>I have experience in Data Analysis and Web Development. Skilled in Python, SQL, Angular, Power BI, and more.</p>
+            <img src="profile.jpg" alt="My Profile Picture" style="width: 150px; border-radius: 50%;">
+            <p>I am Yaswanth, a Data Analyst and Frontend Developer with experience in Microsoft, Citi Bank, and BMO Bank projects.</p>
         </div>
 
-        <!-- Projects Section -->
+        <!-- Projects Section (Fixed Version) -->
         <div id="projects" class="section">
             <h2>My Projects</h2>
-            <p>
-                - NPS Dashboard (Microsoft) <br>
-                - Web App (BMO Bank) <br>
-                - Sales Analytics (Citi Bank)
-            </p>
+
+            <div>
+                <h3>NPS Dashboard (Microsoft)</h3>
+                <img src="project1.jpg" alt="NPS Dashboard" style="width: 100%; max-width: 400px;">
+                <p>Analyzed customer satisfaction using Power BI and SQL.</p>
+            </div>
+
+            <div>
+                <h3>Web Application (BMO Bank)</h3>
+                <img src="project2.jpg" alt="BMO Web App" style="width: 100%; max-width: 400px;">
+                <p>Developed a secure web app with Angular and Auth0.</p>
+            </div>
+
         </div>
 
         <!-- Contact Section -->
         <div id="contact" class="section">
             <h2>Contact Me</h2>
             <p>Email: your.email@example.com <br>
-               LinkedIn: <a href="#">Your LinkedIn</a></p>
+            LinkedIn: <a href="#">Your LinkedIn</a></p>
+            
+            <br>
+            <a href="resume.pdf" download>
+                <button style="padding: 10px 20px; background: #333; color: white; border: none; cursor: pointer;">
+                    Download My Resume
+                </button>
+            </a>
         </div>
 
     </div>
