@@ -67,14 +67,16 @@ header h1 {
     margin-top: 15px;
     padding: 10px 20px;
     background: white;
-    color: #008cba;
+    background: 8dd5df
+
+    color: #fffffff;
     text-decoration: none;
     border-radius: 5px;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #f8f8f8;
+    background: #30dbf3;
 }
 
 /* About Section */
