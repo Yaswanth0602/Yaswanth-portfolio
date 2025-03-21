@@ -3,81 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">  <!-- Correct CSS linking -->
+    <title>My Portfolio | Yaswanth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Navigation Menu -->
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <div class="logo">Yaswanth</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <div class="container">
+    <header id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm <strong>Yaswanth</strong>, a Data Analyst & Frontend Developer passionate about solving problems.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </header>
 
-        <button onclick="showMessage()" style="padding: 10px 20px; margin: 10px; background: #333; color: white; border: none; cursor: pointer;">
-            Click Me
-        </button>
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+        <p>I am a Data Analyst and Frontend Developer with experience in <strong>Microsoft, Citi Bank, and BMO Bank</strong>.</p>
+    </section>
 
-        <button onclick="changeBgColor()" style="padding: 10px 20px; background: #008CBA; color: white; border: none; cursor: pointer;">
-            Change Background Color
-        </button>
-
-        <!-- Home Section -->
-        <div id="home" class="section">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Hi, I'm Yaswanth! A Data Analyst and Frontend Developer passionate about solving problems.</p>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <img src="project1.jpg" alt="NPS Dashboard">
+            <h3>NPS Dashboard (Microsoft)</h3>
+            <p>Analyzed customer satisfaction using Power BI and SQL.</p>
         </div>
-
-        <!-- About Section -->
-        <div id="about" class="section">
-            <h2>About Me</h2>
-            <img src="profile.jpg" alt="My Profile Picture" style="width: 150px; border-radius: 50%;">
-            <p>I am Yaswanth, a Data Analyst and Frontend Developer with experience in Microsoft, Citi Bank, and BMO Bank projects.</p>
+        <div class="project">
+            <img src="project2.jpg" alt="BMO Web App">
+            <h3>Web Application (BMO Bank)</h3>
+            <p>Developed a secure web app with Angular and Auth0.</p>
         </div>
+    </section>
 
-        <!-- Projects Section -->
-        <div id="projects" class="section">
-            <h2>My Projects</h2>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+        <a href="resume.pdf" download class="btn">Download Resume</a>
+    </section>
 
-            <div>
-                <h3>NPS Dashboard (Microsoft)</h3>
-                <img src="project1.jpg" alt="NPS Dashboard" style="width: 100%; max-width: 400px;">
-                <p>Analyzed customer satisfaction using Power BI and SQL.</p>
-            </div>
-
-            <div>
-                <h3>Web Application (BMO Bank)</h3>
-                <img src="project2.jpg" alt="BMO Web App" style="width: 100%; max-width: 400px;">
-                <p>Developed a secure web app with Angular and Auth0.</p>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div id="contact" class="section">
-            <h2>Contact Me</h2>
-            <p>Email: your.email@example.com <br>
-            LinkedIn: <a href="#">Your LinkedIn</a></p>
-            
-            <br>
-            <a href="resume.pdf" download>
-                <button style="padding: 10px 20px; background: #333; color: white; border: none; cursor: pointer;">
-                    Download My Resume
-                </button>
-            </a>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
     <footer>© 2024 Yaswanth. All rights reserved.</footer>
 
-    <!-- JavaScript should be linked here -->
     <script src="script.js"></script>
-
 </body>
 </html>
