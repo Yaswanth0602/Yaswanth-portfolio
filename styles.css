@@ -1,4 +1,4 @@
-/* Global styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +7,15 @@
 }
 
 body {
-    background: #f4f4f4;
+    background: #f9f9f9;
     color: #333;
-    transition: background 0.3s, color 0.3s;
+    transition: 0.3s;
 }
 
-/* Dark mode */
+/* Dark Mode */
 .dark-mode {
     background: #121212;
-    color: #fff;
+    color: white;
 }
 
 /* Navbar */
@@ -28,41 +28,69 @@ nav {
     color: white;
 }
 
-nav a {
-    color: white;
+nav .logo {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
     text-decoration: none;
-    margin: 0 10px;
+    color: white;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 80px 20px;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    color: white;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+.hero h1 span {
+    color: yellow;
 }
 
-.hero p {
-    font-size: 1.2rem;
+.hero .btn {
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    text-decoration: none;
+    display: inline-block;
 }
 
-/* Responsive Grid */
-.skills, .projects, .experience {
+/* Skills */
+.skill-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
     padding: 20px;
 }
 
+.skill {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
 /* Contact Form */
 form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
     max-width: 400px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 input, textarea {
@@ -85,7 +113,7 @@ button {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .hero h1 {
         font-size: 2rem;
     }
