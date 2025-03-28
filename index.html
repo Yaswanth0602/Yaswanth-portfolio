@@ -3,69 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yaswanth Reddy | Data Analyst & Frontend Developer</title>
+    <title>Yaswanth Reddy | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
+    <header>
         <div class="logo">Yaswanth Reddy</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><button id="theme-toggle">🌙</button></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">🌙</button>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span>Yaswanth Reddy</span></h1>
-            <p>Data Analyst | Frontend Developer | Problem Solver</p>
-            <a href="resume.pdf" download class="btn">Download Resume</a>
-            <a href="#contact" class="btn">Contact Me</a>
-        </div>
+    <section id="home">
+        <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>Hi, I'm <span>Yaswanth Reddy</span></h1>
+        <h2>Data Analyst | Frontend Developer</h2>
+        <p>Passionate about solving technical challenges & creating impactful applications.</p>
+        <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
+        <a href="#contact" class="btn">Contact Me</a>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm a Data Analyst and Frontend Developer at Mu Sigma, working with Microsoft. I have experience in web development, data visualization, and dashboard creation.</p>
+        <p>Data Analyst & Frontend Developer at Mu Sigma (Microsoft). Skilled in data visualization, web development, and dashboard creation.</p>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
-        <div class="skill-grid">
-            <div class="skill">Python</div>
-            <div class="skill">SQL</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">Tableau</div>
-            <div class="skill">Angular</div>
-            <div class="skill">Git & GitHub</div>
+        <div class="skills-list">
+            <div>Python</div>
+            <div>SQL</div>
+            <div>JavaScript</div>
+            <div>Power BI</div>
+            <div>Tableau</div>
+            <div>Angular</div>
+            <div>Git & GitHub</div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Microsoft NPS Dashboard</h3>
-            <p>Developed a customer satisfaction analysis dashboard.</p>
-        </div>
-        <div class="project">
-            <h3>BMO Bank Web App</h3>
-            <p>Built a full-stack application with Angular & Auth0.</p>
-        </div>
+        <ul>
+            <li><strong>Microsoft NPS Analysis:</strong> Built dashboards in Power BI.</li>
+            <li><strong>BMO Web App:</strong> Developed an Angular application with Auth0.</li>
+        </ul>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
         <form id="contact-form">
@@ -76,5 +67,10 @@
         </form>
     </section>
 
+    <footer>
+        <p>© 2025 Yaswanth Reddy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
