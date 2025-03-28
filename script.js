@@ -1,11 +1,9 @@
 // Dark Mode Toggle
-const toggleTheme = document.getElementById('theme-toggle');
-
-toggleTheme.addEventListener('click', () => {
+document.getElementById('theme-toggle').addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 });
 
-// Contact Form Submission (Send to Email)
+// Contact Form Submission
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
     
@@ -14,8 +12,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     const email = formData.get('email');
     const message = formData.get('message');
 
-    // Send email using Formspree
-    fetch('https://formspree.io/f/your_form_id', {  // REPLACE 'your_form_id' with your Formspree ID
+    fetch('https://formspree.io/f/your_form_id', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
