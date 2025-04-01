@@ -1,27 +1,22 @@
-// Dark Mode Toggle
-document.getElementById('theme-toggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
+// Dark Mode Toggle Function
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+const body = document.body;
 
-// Contact Form Submission
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    
-    const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
+// Check user preference in localStorage
+if (localStorage.getItem("darkMode") === "enabled") {
+    body.classList.add("dark-mode");
+    darkModeToggle.textContent = "☀ Light Mode";
+}
 
-    fetch('https://formspree.io/f/your_form_id', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-    }).then(response => {
-        if (response.ok) {
-            alert('Message sent successfully!');
-            document.getElementById('contact-form').reset();
-        } else {
-            alert('Error sending message. Try again!');
-        }
-    });
+// Toggle Dark Mode
+darkModeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+        darkModeToggle.textContent = "☀ Light Mode";
+    } else {
+        localStorage.setItem("darkMode", "disabled");
+        darkModeToggle.textContent = "🌙 Dark Mode";
+    }
 });
