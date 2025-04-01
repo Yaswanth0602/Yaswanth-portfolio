@@ -1,120 +1,143 @@
-/* General Reset */
-* {
+/* Default Light Mode Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    transition: background 0.3s, color 0.3s;
 }
 
-body {
-    background: #f9f9f9;
-    color: #333;
-    transition: 0.3s;
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-/* Dark Mode */
-.dark-mode {
-    background: #121212;
+/* Header */
+header {
+    background-color: #333;
     color: white;
+    padding: 40px 0;
+    text-align: center;
 }
 
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10%;
-    background: #222;
-    color: white;
+header h1 {
+    margin: 0;
+    font-size: 3rem;
 }
 
-nav .logo {
-    font-size: 1.5rem;
+header p {
+    font-size: 1.2rem;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
+header nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.nav-links li {
+header nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
-.nav-links a {
+header nav ul li a {
+    color: white;
     text-decoration: none;
+    font-weight: bold;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .project, .dark-mode .skill {
+    background-color: #222;
     color: white;
 }
 
-/* Hero Section */
-.hero {
+.dark-mode a {
+    color: #1db954;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #6e45e2, #88d3ce);
-    color: white;
 }
 
-.hero h1 span {
-    color: yellow;
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-.hero .btn {
-    padding: 10px 20px;
-    background: #ffcc00;
-    color: black;
-    border: none;
-    cursor: pointer;
-    margin: 10px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-/* Skills */
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    padding: 20px;
+.skills-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .skill {
-    background: #222;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 22%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 20px;
 }
 
-/* Contact Form */
-form {
-    max-width: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-input, textarea {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-}
-
-button {
-    background: #333;
-    color: white;
-    padding: 10px;
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
-/* Responsive */
+#dark-mode-toggle:hover {
+    background-color: #555;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
+    .container {
+        width: 90%;
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    .skills-list {
+        flex-direction: column;
+    }
+
+    .skill {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
